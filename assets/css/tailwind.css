@@ -41,13 +41,13 @@ summary::-webkit-details-marker {
 }
 
 .linkClass{
-  @apply block p-4 text-corporateGray rounded-xl;
+  @apply block pl-3 text-corporateGray border-l-2 border-corporateBlack mb-2;
 }
 .linkActiveClass{
-  @apply bg-corporateLight text-corporateBlack;
+  @apply text-corporateLight border-l-2 border-corporate;
 }
 .linkHoverClass{
-  @apply hover:bg-corporateLight;
+  @apply border-l-2 hover:border-corporateGray;
 }
 
 .glossyEffect{
@@ -67,8 +67,8 @@ summary::-webkit-details-marker {
 
 
 ::selection {
-  background-color: #171F34;
-  color: #FFF9F9;
+  background-color: #8B8F9A;
+  color: #FFEBEC;
 }
 
 /* Scroll bar */

@@ -1,11 +1,11 @@
 <template>
   <div>
     <p>Service</p>
+    <sourceView/>
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
 </script>
 
 <style></style>

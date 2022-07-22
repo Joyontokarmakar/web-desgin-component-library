@@ -9,25 +9,18 @@
     </div>
     <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-285px)] py-2">
       <div class="pr-3">
-        <NuxtLink to="/" class="linkClass" :class="$route.path === '/' ? 'linkActiveClass' : 'linkHoverClass'">
-        Dashboard
-      </NuxtLink>
-      <dropdowns
-        :title="'Dropdown'"
-        :description="'Card description will goes here'"
-        :dropdownClass="dropdownClass"
-        :detailsClass="detailsClass"
-        :descriptionClass="descriptionClass"
-      />
-      <NuxtLink to="/services" class="linkClass" :class="$route.path === '/services' ? 'linkActiveClass' : 'linkHoverClass'">
-        Services
-      </NuxtLink>
-      <NuxtLink to="/about" class="linkClass" :class="$route.path === '/about' ? 'linkActiveClass' : 'linkHoverClass'">
-        About
-      </NuxtLink>
-      <NuxtLink to="/contact" class="linkClass" :class="$route.path === '/contact' ? 'linkActiveClass' : 'linkHoverClass'">
-        Contact
-      </NuxtLink>
+        <sidebarButton :pathName ="'/'" :name="'Get Started'"/>
+        <sidebarButton :pathName ="'/services'" :name="'Services'"/>
+        <sidebarButton :pathName ="'/about'" :name="'About'"/>
+        <sidebarButton :pathName ="'/contact'" :name="'Contact'"/>
+
+        <!-- <dropdowns
+          :title="'Dropdown'"
+          :description="'Card description will goes here'"
+          :dropdownClass="dropdownClass"
+          :detailsClass="detailsClass"
+          :descriptionClass="descriptionClass"
+        /> -->
       </div>
     </div>
     <p class="text-corporateGray text-xs text-center py-3">All Rights Reserved &copy; <NuxtLink to="https://joyontokarmakar.netlify.app" target="_blank" class="font-bold">Joyonto Karmakar</NuxtLink></p>
@@ -38,9 +31,9 @@
 export default {
   data() {
     return {
-      dropdownClass: "text-sm text-corporateGray",
-      detailsClass: "block rounded-xl p-4",
-      descriptionClass:"text-sm",
+      // dropdownClass: "text-sm text-corporateGray",
+      // detailsClass: "block rounded-xl p-4",
+      // descriptionClass:"text-sm",
     };
   },
 };

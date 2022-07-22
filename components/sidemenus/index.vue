@@ -11,31 +11,20 @@
         </div>
         <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-150px)] py-2">
           <div class="pr-3">
-            <NuxtLink to="/" class="linkClass" :class="$route.path === '/' ? 'linkActiveClass' : 'linkHoverClass'">
-              Dashboard
-            </NuxtLink>
-            <dropdowns
+            <sidebarButton @click="close" :pathName ="'/'" :name="'Get Started'"/>
+            <sidebarButton @click="close" :pathName ="'/services'" :name="'Services'"/>
+            <sidebarButton @click="close" :pathName ="'/about'" :name="'About'"/>
+            <sidebarButton @click="close" :pathName ="'/contact'" :name="'Contact'"/>
+            <sidebarButton @click="close" :pathName ="'/login'" :name="'Login'"/>
+            <sidebarButton @click="close" :pathName ="'/sign-up'" :name="'Sign Up'"/>
+            
+            <!-- <dropdowns
               :title="'Dropdown'"
               :description="'Card description will goes here'"
               :dropdownClass="dropdownClass"
               :detailsClass="detailsClass"
               :descriptionClass="descriptionClass"
-            />
-            <NuxtLink to="/services" @click="close" class="linkClass" :class="$route.path === '/services' ? 'linkActiveClass' : 'linkHoverClass'">
-              Services
-            </NuxtLink>
-            <NuxtLink to="/about" @click="close" class="linkClass" :class="$route.path === '/about' ? 'linkActiveClass' : 'linkHoverClass'">
-              About
-            </NuxtLink>
-            <NuxtLink to="/contact" @click="close" class="linkClass" :class="$route.path === '/contact' ? 'linkActiveClass' : 'linkHoverClass'">
-              Contact
-            </NuxtLink>
-            <NuxtLink to="/login" @click="close" class="linkClass" :class="$route.path === '/login' ? 'linkActiveClass' : 'linkHoverClass'">
-              Login
-            </NuxtLink>
-            <NuxtLink to="/sign-up" @click="close" class="linkClass" :class="$route.path === '/sign-up' ? 'linkActiveClass' : 'linkHoverClass'">
-              Sign Up
-            </NuxtLink>
+            /> -->
           </div>
         </div>
         <p class="text-corporateGray text-xs text-center py-3">All Rights Reserved &copy; <NuxtLink to="https://joyontokarmakar.netlify.app" target="_blank" class="font-bold">Joyonto Karmakar</NuxtLink></p>
@@ -52,9 +41,9 @@ export default {
   props: ["open"],
   data() {
     return {
-      dropdownClass: "text-sm text-corporateGray",
-      detailsClass: "block rounded-xl p-4",
-      descriptionClass:"text-sm",
+      // dropdownClass: "text-sm text-corporateGray",
+      // detailsClass: "block rounded-xl p-4",
+      // descriptionClass:"text-sm",
     };
   },
   methods: {
