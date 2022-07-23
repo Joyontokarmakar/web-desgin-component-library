@@ -2,23 +2,14 @@
   <div class="bg-corporateBlack text-corporateGray border rounded">
     <pre class="language-html line-numbers">
       <code>
-        {{code}}
+        {{props.mainCode}}
       </code>
     </pre>
   </div>
 </template>
 
 <script setup>
-
-  const code = `
-    <html>
-      <body>
-        <div>
-          <Button> Name </Button>
-        </div>
-      </body>
-    </html>
-  `
+  const props = defineProps({mainCode: { type: String,}})
 </script>
 
 <style></style>

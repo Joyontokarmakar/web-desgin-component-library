@@ -1,7 +1,7 @@
 <template>
   <div class="hidden md:block w-[300px] p-5 bg-corporateBlack h-screen divide-y divide-corporateGray">
     <div class="py-3">
-      <img src="@/assets/images/logo/logo.png" alt="profile" class="rounded-full w-2/5 shadow-md mx-auto"/>
+      <img src="@/assets/images/logo/webDesignComponentLibrary-Logo.png" alt="profile" class="rounded-full w-2/5 shadow-md mx-auto"/>
       <div class="leading-tight">
         <h2 class="uppercase font-bold text-xl text-center  text-corporateGray">Joyonto Karmakar</h2>
         <h2 class="text-sm text-center text-corporateGray">admin@domain.com</h2>
