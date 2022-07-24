@@ -8,7 +8,7 @@ module.exports = {
         corporateBg: '#FFF9F9',
         corporateGray: '#8B8F9A',
         corporateBlack: '#171F34',
-        corporateGreen: '##3EC779',
+        corporateGreen: '#3EC779',
         corporateYellow: '#F4AC21',
       },
     },

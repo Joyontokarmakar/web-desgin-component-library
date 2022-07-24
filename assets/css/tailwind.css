@@ -77,7 +77,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
+  height: 8px;
   margin: 0px 2px;
 }
 
@@ -94,6 +95,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #171F34 !important;
-  -webkit-background: #171F34 !important;
+  background: #8B8F9A !important;
+  -webkit-background: #8B8F9A !important;
 }

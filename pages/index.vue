@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-auto">
     <p>Home</p>
   </div>
 </template>

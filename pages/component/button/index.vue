@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>Service</p>
     <sourceView :allData="mainData"/>
   </div>
 </template>
@@ -27,5 +26,4 @@
     `
   })
 </script>
-
 <style></style>

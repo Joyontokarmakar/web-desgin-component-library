@@ -1,10 +1,13 @@
 <template>
-  <div class="bg-corporateBlack text-corporateGray border rounded">
-    <pre class="language-html line-numbers">
+  <div class="bg-corporateBlack text-corporateGray border rounded w-full overflow-x-auto">
+    <!-- <pre class="language-html">
       <code>
         {{props.mainCode}}
       </code>
-    </pre>
+    </pre> -->
+    <xmp>
+      {{props.mainCode}}
+    </xmp>
   </div>
 </template>
 

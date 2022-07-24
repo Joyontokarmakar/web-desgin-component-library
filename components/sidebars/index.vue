@@ -6,17 +6,20 @@
         <h2 class="uppercase font-bold text-sm text-corporateGray">Web Design & Components Library</h2>
       </div>
     </div>
-    <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-285px)] py-2">
+    <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-185px)] py-2">
       <div class="pr-3">
         <sidebarButton :pathName ="'/'" :name="'Get Started'"/>
         <div class="flex justify-start gap-3">
           <i class="fa fa-search"></i>
-          <h5 class="font-bold text-lg">Components</h5>
+          <h5 class="font-bold text-lg text-corporateGray">Components</h5>
         </div>
-        <sidebarButton :pathName ="'/'" :name="'Get Started'" :subButton="true"/>
-        <sidebarButton :pathName ="'/services'" :name="'Services'" :subButton="false"/>
-        <sidebarButton :pathName ="'/about'" :name="'About'" :subButton="false"/>
-        <sidebarButton :pathName ="'/contact'" :name="'Contact'" :subButton="false"/>
+        <sidebarButton :pathName ="'/component/button'" :name="'Button'" :subMenu="true"/>
+        <sidebarButton :pathName ="'/component/accordion'" :name="'Accordion'" :subMenu="true"/>
+        <sidebarButton :pathName ="'/component/dropdown'" :name="'Dropdown'" :subMenu="true"/>
+        <sidebarButton :pathName ="'/component/floatingInput'" :name="'Floating Input'" :subMenu="true"/>
+        <sidebarButton :pathName ="'/services'" :name="'Services'" :subMenu="false"/>
+        <sidebarButton :pathName ="'/about'" :name="'About'" :subMenu="false"/>
+        <sidebarButton :pathName ="'/contact'" :name="'Contact'" :subMenu="false"/>
 
         <!-- <dropdowns
           :title="'Dropdown'"
