@@ -10,9 +10,14 @@
     <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-285px)] py-2">
       <div class="pr-3">
         <sidebarButton :pathName ="'/'" :name="'Get Started'"/>
-        <sidebarButton :pathName ="'/services'" :name="'Services'"/>
-        <sidebarButton :pathName ="'/about'" :name="'About'"/>
-        <sidebarButton :pathName ="'/contact'" :name="'Contact'"/>
+        <div class="flex justify-start gap-3">
+          <i class="fa fa-search"></i>
+          <h5 class="font-bold text-lg">Components</h5>
+        </div>
+        <sidebarButton :pathName ="'/'" :name="'Get Started'" :subButton="true"/>
+        <sidebarButton :pathName ="'/services'" :name="'Services'" :subButton="false"/>
+        <sidebarButton :pathName ="'/about'" :name="'About'" :subButton="false"/>
+        <sidebarButton :pathName ="'/contact'" :name="'Contact'" :subButton="false"/>
 
         <!-- <dropdowns
           :title="'Dropdown'"
