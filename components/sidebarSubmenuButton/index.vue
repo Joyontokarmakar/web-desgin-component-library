@@ -3,9 +3,9 @@
           :to="props.pathName" 
           class="linkClass" 
           :class="
-               $route.path === props.pathName && props.subMenu ? 'linkActiveClass ml-5' : 
+               $route.path === props.pathName && props.subMenu ? 'linkActiveClass ml-7' : 
                $route.path === props.pathName ? 'linkActiveClass': 
-               props.subMenu ? 'ml-5':
+               props.subMenu ? 'ml-7':
                'linkHoverClass'">
           {{props.name}}
      </NuxtLink>

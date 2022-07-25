@@ -41,13 +41,20 @@ summary::-webkit-details-marker {
 }
 
 .linkClass{
-  @apply block pl-3 text-corporateGray border-l-2 border-corporateBlack mb-2;
+  @apply block pl-3 text-corporateGray border-l-2 border-corporateBlack;
 }
 .linkActiveClass{
   @apply text-corporateLight border-l-2 border-corporate;
 }
 .linkHoverClass{
   @apply border-l-2 hover:border-corporateGray;
+}
+
+.mainMenuClass{
+  @apply text-corporateGray font-bold text-lg;
+}
+.mainMenuActiveClass{
+  @apply text-corporateLight;
 }
 
 .glossyEffect{

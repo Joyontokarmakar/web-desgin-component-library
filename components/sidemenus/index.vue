@@ -11,18 +11,25 @@
         </div>
         <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-150px)] py-2">
           <div class="pr-3">
-            <sidebarButton :pathName ="'/'" :name="'Get Started'"/>
-            <div class="flex justify-start gap-3">
-              <i class="fa fa-search"></i>
-              <h5 class="font-bold text-lg text-corporateGray">Components</h5>
-            </div>
-            <sidebarButton :pathName ="'/component/button'" :name="'Button'" :subMenu="true"/>
-            <sidebarButton :pathName ="'/component/accordion'" :name="'Accordion'" :subMenu="true"/>
-            <sidebarButton :pathName ="'/component/dropdown'" :name="'Dropdown'" :subMenu="true"/>
-            <sidebarButton :pathName ="'/component/floatingInput'" :name="'Floating Input'" :subMenu="true"/>
-            <sidebarButton :pathName ="'/services'" :name="'Services'" :subMenu="false"/>
-            <sidebarButton :pathName ="'/about'" :name="'About'" :subMenu="false"/>
-            <sidebarButton :pathName ="'/contact'" :name="'Contact'" :subMenu="false"/>
+            <sidebarMainmenuButton @click="close" :pathName ="'/'" :name="'Get Started'" :subMenu="false">
+              <svgHomeIcon fill="#8B8F9A" width="16" height="16" />
+            </sidebarMainmenuButton>
+            <sidebarMainmenuButton @click="close" :pathName ="'#'" :name="'Components'" :subMenu="false">
+              <svgComponentIcon fill="#8B8F9A" width="16" height="16" />
+            </sidebarMainmenuButton>
+            <sidebarSubmenuButton @click="close" :pathName ="'/component/button'" :name="'Button'" :subMenu="true"/>
+            <sidebarSubmenuButton @click="close" :pathName ="'/component/accordion'" :name="'Accordion'" :subMenu="true"/>
+            <sidebarSubmenuButton @click="close" :pathName ="'/component/dropdown'" :name="'Dropdown'" :subMenu="true"/>
+            <sidebarSubmenuButton @click="close" :pathName ="'/component/floatingInput'" :name="'Floating Input'" :subMenu="true"/>
+            <sidebarMainmenuButton @click="close" :pathName ="'/services'" :name="'Services'" :subMenu="false">
+              <svgServiceIcon fill="#8B8F9A" width="16" height="16" />
+            </sidebarMainmenuButton>
+            <sidebarMainmenuButton @click="close" :pathName ="'/about'" :name="'About'" :subMenu="false">
+              <svgIdeaIcon fill="#8B8F9A" width="16" height="16" />
+            </sidebarMainmenuButton>
+            <sidebarMainmenuButton @click="close" :pathName ="'/contact'" :name="'Contact'" :subMenu="false">
+              <svgMobileIcon fill="#8B8F9A" width="16" height="16" />
+            </sidebarMainmenuButton>
             
             <!-- <dropdowns
               :title="'Dropdown'"
