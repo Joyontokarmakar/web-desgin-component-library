@@ -11,7 +11,7 @@
           <th class="border border-slate-500">Password</th>
         </tr>
         <tr class="border border-slate-500" v-for="(item, index) in loginData" :key="index">
-          <td class="border border-slate-500">{{index}}</td>
+          <td class="border border-slate-500">{{index+1}}</td>
           <td class="border border-slate-500">{{item.email}}</td>
           <td class="border border-slate-500">{{item.password}}</td>
         </tr>

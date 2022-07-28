@@ -5,8 +5,10 @@
         <div class="py-2 flex justify-between items-center">
           <img src="@/assets/images/logo/logo.png" alt="profile" class="rounded-full w-[15%] shadow-md"/>
           <div class="text-right">
+            <NuxtLink to="/login" class="px-3 py-2"> Login </NuxtLink>
             <h2 class="uppercase font-bold text-sm text-corporateGray">Joyonto</h2>
             <h2 class="text-sm text-corporateGray">admin@domain.com</h2>
+            <NuxtLink to="/sign-up" class="px-3 py-2"> Signup </NuxtLink>
           </div>
         </div>
         <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-150px)] py-2">
