@@ -9,6 +9,8 @@
         <NuxtLink to="/services" class="px-3 py-2"> Services </NuxtLink> -->
         <!-- <NuxtLink to="/sign-up" class="px-3 py-2"> Signup </NuxtLink> -->
         <!-- {{userData}} -->
+
+
         <!-- <NuxtLink v-if="userData.isLogin == false" to="/login" class="px-3 py-2">Login</NuxtLink>
         <Button v-else class="px-3 py-2" @click="logout"> Logout </Button>
         <div v-if="userData.isLogin == true" class="rounded-full w-10 h-10 shadow-md bg-corporate text-corporateLight flex justify-center items-center">
@@ -45,22 +47,21 @@
 
 <script setup>
   const sidebar = ref(false);
-  // const userData = JSON.parse(localStorage.getItem('userData'))
-  const userInfo = reactive({
-    fName: "",
-    lName: "",
-    email: "",
-    isLogin: true
-  });
+  // const userInfo = reactive({
+  //   fName: "",
+  //   lName: "",
+  //   email: "",
+  //   isLogin: true
+  // });
   onMounted(()=> {
     storage();
   })
   const storage = () =>{
-    console.log(localStorage.getItem("userData"));
+    // console.log(localStorage.getItem("userData"));
   }
-  const logout = () => {
-    localStorage.removeItem('userData');
-  }
+  // const logout = () => {
+  //   localStorage.removeItem('userData');
+  // }
   const open = () =>{
     sidebar.value = !sidebar.value
   };
