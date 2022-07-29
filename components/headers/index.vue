@@ -3,7 +3,7 @@
     <div class="bg-corporate p-4 flex justify-between items-center">
       <NuxtLink to="/" class="text-white font-bold text-xl md:text-2xl ml-0">Web Component</NuxtLink>
       <div class="hidden md:flex justify-between items-center text-white space-x-4 mr-0">
-        <NuxtLink v-if="!userInfo.isLogin" to="/login" class="px-3 py-2">Login</NuxtLink>
+        <NuxtLink v-if="!userInfo.isLogin" to="/login" @click="login" class="px-3 py-2">Login</NuxtLink>
         <Button v-else class="px-3 py-2" @click="logout"> Logout </Button>
         <div v-if="userInfo.isLogin" class="rounded-full w-10 h-10 shadow-md bg-corporateLight text-corporate font-bold flex justify-center items-center">
           {{userInfo.fName.charAt(0) + userInfo.lName.charAt(0)}}
@@ -51,7 +51,6 @@
     var userLoginData = localStorage.getItem("userData");
     if(userLoginData){
       const userParseLoginData = JSON.parse(userLoginData);
-      console.log(userParseLoginData);
       userInfo.fName = userParseLoginData.fName;
       userInfo.lName = userParseLoginData.lName;
       userInfo.email = userParseLoginData.email;
@@ -61,7 +60,11 @@
   const logout = () => {
     localStorage.removeItem('userData');
     window.location.href = "/";
-  }
+  };
+  const login = () => {
+    localStorage.removeItem('userData');
+    window.location.href = "/login";
+  };
   const open = () =>{
     sidebar.value = !sidebar.value
   };

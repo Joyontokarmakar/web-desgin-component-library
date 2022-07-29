@@ -3,12 +3,23 @@
     <div class="w-3/4 h-screen absolute top-0 bottom-0 bg-corporateBlack shadow-lg text-corporate transition-all duration-500 ease-in-out overflow-x-hidden z-10" :class="props.open ? 'left-0' : '-left-full'">
       <div class="p-5 bg-corporateBlack h-screen divide-y divide-corporateGray">
         <div class="py-2 flex justify-between items-center">
-          <img src="@/assets/images/logo/logo.png" alt="profile" class="rounded-full w-[15%] shadow-md"/>
+
+          <div v-if="userInfo.isLogin" class="rounded-full w-10 h-10 shadow-md bg-corporateLight text-corporate font-bold flex justify-center items-center">
+            {{userInfo.fName.charAt(0) + userInfo.lName.charAt(0)}}
+          </div>
+          <div v-else>
+            <img 
+              src="@/assets/images/logo/webDesignComponentLibrary-Logo.png"
+              alt="profile"
+              class="rounded-full w-10 h-10 shadow-md"
+            />
+          </div>
+
           <div class="text-right">
-            <NuxtLink to="/login" class="px-3 py-2"> Login </NuxtLink>
-            <h2 class="uppercase font-bold text-sm text-corporateGray">Joyonto</h2>
-            <h2 class="text-sm text-corporateGray">admin@domain.com</h2>
-            <NuxtLink to="/sign-up" class="px-3 py-2"> Signup </NuxtLink>
+            <h2 class="uppercase font-bold text-sm text-corporateGray">{{userInfo.fName + ' ' + userInfo.lName}}</h2>
+            <h2 class="text-sm text-corporateGray">{{userInfo.email}}</h2>
+            <NuxtLink v-if="!userInfo.isLogin" to="/login" class="px-3 py-2">Login</NuxtLink>
+            <Button v-else class="p-0" @click="logout"> Logout </Button>
           </div>
         </div>
         <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-150px)] py-2">
@@ -52,27 +63,24 @@
 </template>
 
 <script setup>
-  const props = defineProps({
-    open: {type: Boolean}
-  })
-  const emit = defineEmits(
-    ['close']
-  )
   // const dropdownClass = "text-sm text-corporateGray",
   // const detailsClass = "block rounded-xl p-4",
   // const descriptionClass = "text-sm",
-  // const close = () => {
-  //   this.$emit("close");
-  // };
-  function close(value) {
-    emit('close', value)
-  }
   const userInfo = reactive({
     fName: "",
     lName: "",
     email: "",
     isLogin: false
   });
+  const props = defineProps({
+    open: {type: Boolean}
+  })
+  const emit = defineEmits(
+    ['close']
+  )
+  function close(value) {
+    emit('close', value)
+  }
   onMounted(()=> {
     storage();
   })
@@ -80,7 +88,6 @@
     var userLoginData = localStorage.getItem("userData");
     if(userLoginData){
       const userParseLoginData = JSON.parse(userLoginData);
-      console.log(userParseLoginData);
       userInfo.fName = userParseLoginData.fName;
       userInfo.lName = userParseLoginData.lName;
       userInfo.email = userParseLoginData.email;

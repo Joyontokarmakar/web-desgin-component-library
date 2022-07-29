@@ -35,6 +35,13 @@
      const loginError = ref(false);
      const loginDataCheck = ref(false);
 
+     onMounted(()=> {
+          clearStorage();
+     })
+     const clearStorage = () =>{
+          localStorage.removeItem('userData');
+     }
+
      const formSubmit = () => {
           loginDataCheck.value = true
           for(var i=0; i<loginData.value.length; i++){
@@ -44,7 +51,7 @@
                     userData.fName = loginData.value[i].firstName;
                     userData.lName = loginData.value[i].lastName;
                     userData.email = loginData.value[i].email;
-                    localStorage.removeItem('userData');
+                    clearStorage();
                     localStorage.setItem('userData', JSON.stringify(userData));
 
                     window.location.href = "/";
