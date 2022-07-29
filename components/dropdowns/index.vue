@@ -1,8 +1,8 @@
 <template>
-  <details class="text-xl hover:bg-white hover:text-black cursor-pointer overflow-hidden transition-all duration-300 ease-linear" :class="detailsClass">
-    <summary class="flex justify-between" :class="dropdownClass">
-      <span :class="titleClass">
-        {{ title }}
+  <details class="text-xl hover:bg-white hover:text-black cursor-pointer overflow-hidden transition-all duration-300 ease-linear" :class="props.detailsClass">
+    <summary class="flex justify-between" :class="props.dropdownClass">
+      <span :class="props.titleClass">
+        {{ props.title }}
       </span>
       <button>
         <svg
@@ -16,14 +16,19 @@
         </svg>
       </button>
     </summary>
-    <div :class="descriptionClass">{{ description }}</div>
+    <div :class="props.descriptionClass">{{ props.description }}</div>
   </details>
 </template>
 
-<script>
-export default {
-  props: ["detailsClass", "dropdownClass", "title", "titleClass",  "description", "descriptionClass"],
-};
+<script setup>
+  const props = defineProps({
+    detailsClass: {type: String},
+    dropdownClass: {type: String},
+    title: {type: String},
+    titleClass: {type: String},
+    description: {type: String},
+    descriptionClass: {type: String},
+  })
 </script>
 
 <style></style>

@@ -4,8 +4,8 @@
   </NuxtLayout>
 </template>
 
-<script>
-const userInfo = reactive({
+<script setup>
+  const userInfo = reactive({
     fName: "Default",
     lName: "User",
     email: "defaultuser@gmail.com",

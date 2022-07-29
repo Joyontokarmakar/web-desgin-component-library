@@ -5,10 +5,8 @@
           :class="$route.path === props.pathName ? 'mainMenuActiveClass' : ''"
           >
           <slot/>
-          <h5 
-               class="mainMenuClass mb-0" 
-               :class="$route.path === props.pathName ? 'mainMenuActiveClass' : ''">
-                    {{props.name}}
+          <h5 class="mainMenuClass mb-0" :class="$route.path === props.pathName ? 'mainMenuActiveClass' : ''">
+               {{props.name}}
           </h5>
      </NuxtLink>
 </template>

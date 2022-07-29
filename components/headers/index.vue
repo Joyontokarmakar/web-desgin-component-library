@@ -2,28 +2,19 @@
   <div>
     <div class="bg-corporate p-4 flex justify-between items-center">
       <NuxtLink to="/" class="text-white font-bold text-xl md:text-2xl ml-0">Web Component</NuxtLink>
-      <div
-        class="hidden md:flex justify-between items-center text-white space-x-4 mr-0"
-      >
-        <!-- <NuxtLink to="/" class="px-3 py-2"> Dashboard </NuxtLink>
-        <NuxtLink to="/services" class="px-3 py-2"> Services </NuxtLink> -->
-        <!-- <NuxtLink to="/sign-up" class="px-3 py-2"> Signup </NuxtLink> -->
-        <!-- {{userData}} -->
-
-
+      <div class="hidden md:flex justify-between items-center text-white space-x-4 mr-0">
         <NuxtLink v-if="!userInfo.isLogin" to="/login" class="px-3 py-2">Login</NuxtLink>
         <Button v-else class="px-3 py-2" @click="logout"> Logout </Button>
-        <div v-if="userInfo.isLogin" class="rounded-full w-10 h-10 shadow-md bg-corporate text-corporateLight flex justify-center items-center">
+        <div v-if="userInfo.isLogin" class="rounded-full w-10 h-10 shadow-md bg-corporateLight text-corporate font-bold flex justify-center items-center">
           {{userInfo.fName.charAt(0) + userInfo.lName.charAt(0)}}
         </div>
         <div v-else>
           <img 
-          src="@/assets/images/logo/logo.png"
+          src="@/assets/images/logo/webDesignComponentLibrary-Logo.png"
           alt="profile"
           class="rounded-full w-10 h-10 shadow-md"
         />
         </div>
-        
       </div>
       <div class="block md:hidden cursor-pointer" @click="open">
         <svg

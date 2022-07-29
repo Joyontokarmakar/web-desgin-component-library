@@ -1,6 +1,6 @@
 <template>
   <div class="block md:hidden">
-    <div class="w-3/4 h-screen absolute top-0 bottom-0 bg-corporateBlack shadow-lg text-corporate transition-all duration-500 ease-in-out overflow-x-hidden z-10" :class="open ? 'left-0' : '-left-full'">
+    <div class="w-3/4 h-screen absolute top-0 bottom-0 bg-corporateBlack shadow-lg text-corporate transition-all duration-500 ease-in-out overflow-x-hidden z-10" :class="props.open ? 'left-0' : '-left-full'">
       <div class="p-5 bg-corporateBlack h-screen divide-y divide-corporateGray">
         <div class="py-2 flex justify-between items-center">
           <img src="@/assets/images/logo/logo.png" alt="profile" class="rounded-full w-[15%] shadow-md"/>
@@ -46,27 +46,51 @@
       </div>
     </div>
     <div class="h-screen absolute top-0 bottom-0 bg-black/50 shadow-lg transition-all duration-500 ease-in-out cursor-pointer overflow-x-hidden z-10"
-      :class="open ? 'left-3/4 w-1/4' : 'left-full w-0'" @click="close">
+      :class="props.open ? 'left-3/4 w-1/4' : 'left-full w-0'" @click="close">
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  props: ["open"],
-  data() {
-    return {
-      // dropdownClass: "text-sm text-corporateGray",
-      // detailsClass: "block rounded-xl p-4",
-      // descriptionClass:"text-sm",
-    };
-  },
-  methods: {
-    close() {
-      this.$emit("close");
-    },
-  },
-};
+<script setup>
+  const props = defineProps({
+    open: {type: Boolean}
+  })
+  const emit = defineEmits(
+    ['close']
+  )
+  // const dropdownClass = "text-sm text-corporateGray",
+  // const detailsClass = "block rounded-xl p-4",
+  // const descriptionClass = "text-sm",
+  // const close = () => {
+  //   this.$emit("close");
+  // };
+  function close(value) {
+    emit('close', value)
+  }
+  const userInfo = reactive({
+    fName: "",
+    lName: "",
+    email: "",
+    isLogin: false
+  });
+  onMounted(()=> {
+    storage();
+  })
+  const storage = () =>{
+    var userLoginData = localStorage.getItem("userData");
+    if(userLoginData){
+      const userParseLoginData = JSON.parse(userLoginData);
+      console.log(userParseLoginData);
+      userInfo.fName = userParseLoginData.fName;
+      userInfo.lName = userParseLoginData.lName;
+      userInfo.email = userParseLoginData.email;
+      userInfo.isLogin = userParseLoginData.isLogin;
+    }
+  }
+  const logout = () => {
+    localStorage.removeItem('userData');
+    window.location.href = "/";
+  }
 </script>
 
 <style></style>

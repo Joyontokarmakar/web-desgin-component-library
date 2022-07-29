@@ -40,16 +40,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      // dropdownClass: "text-sm text-corporateGray",
-      // detailsClass: "block rounded-xl p-4",
-      // descriptionClass:"text-sm",
-    };
-  },
-};
+<script setup>
+
+  // const dropdownClass = "text-sm text-corporateGray",
+  // const detailsClass = "block rounded-xl p-4",
+  // const descriptionClass = "text-sm",
+    
 </script>
 
 <style></style>

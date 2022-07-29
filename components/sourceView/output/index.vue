@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-const props = defineProps({mainOutput: { type: Object,}})
+     const props = defineProps({mainOutput: { type: Object,}})
 </script>
