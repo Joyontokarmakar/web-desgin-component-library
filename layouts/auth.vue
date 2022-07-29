@@ -24,7 +24,16 @@
 </template>
 
 <script setup>
-const { data: loginData } = await useFetch('https://joyontojsondata.netlify.app/loginData.json')
+    const { data: loginData } = await useFetch('https://joyontojsondata.netlify.app/loginData.json');
+
+  // const loginData = ref({});
+  // const loadLoginInfo = async() => {
+  //   const data = await useFetch('https://joyontojsondata.netlify.app/loginData.json');
+  //   loginData = await data.json()
+  // };
+  // onBeforeMount(()=> {
+  //   loadLoginInfo ();
+  // });
 </script>
 
 <style></style>

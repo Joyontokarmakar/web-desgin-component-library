@@ -11,10 +11,10 @@
         <!-- {{userData}} -->
 
 
-        <!-- <NuxtLink v-if="userData.isLogin == false" to="/login" class="px-3 py-2">Login</NuxtLink>
+        <NuxtLink v-if="!userInfo.isLogin" to="/login" class="px-3 py-2">Login</NuxtLink>
         <Button v-else class="px-3 py-2" @click="logout"> Logout </Button>
-        <div v-if="userData.isLogin == true" class="rounded-full w-10 h-10 shadow-md bg-corporate text-corporateLight flex justify-center items-center">
-          {{userData.fName.charAt(0) + userData.lName.charAt(0)}}
+        <div v-if="userInfo.isLogin" class="rounded-full w-10 h-10 shadow-md bg-corporate text-corporateLight flex justify-center items-center">
+          {{userInfo.fName.charAt(0) + userInfo.lName.charAt(0)}}
         </div>
         <div v-else>
           <img 
@@ -22,7 +22,7 @@
           alt="profile"
           class="rounded-full w-10 h-10 shadow-md"
         />
-        </div> -->
+        </div>
         
       </div>
       <div class="block md:hidden cursor-pointer" @click="open">
@@ -47,21 +47,30 @@
 
 <script setup>
   const sidebar = ref(false);
-  // const userInfo = reactive({
-  //   fName: "",
-  //   lName: "",
-  //   email: "",
-  //   isLogin: true
-  // });
+  const userInfo = reactive({
+    fName: "",
+    lName: "",
+    email: "",
+    isLogin: false
+  });
   onMounted(()=> {
     storage();
   })
   const storage = () =>{
-    // console.log(localStorage.getItem("userData"));
+    var userLoginData = localStorage.getItem("userData");
+    if(userLoginData){
+      const userParseLoginData = JSON.parse(userLoginData);
+      console.log(userParseLoginData);
+      userInfo.fName = userParseLoginData.fName;
+      userInfo.lName = userParseLoginData.lName;
+      userInfo.email = userParseLoginData.email;
+      userInfo.isLogin = userParseLoginData.isLogin;
+    }
   }
-  // const logout = () => {
-  //   localStorage.removeItem('userData');
-  // }
+  const logout = () => {
+    localStorage.removeItem('userData');
+    window.location.href = "/";
+  }
   const open = () =>{
     sidebar.value = !sidebar.value
   };

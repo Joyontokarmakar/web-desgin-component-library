@@ -5,7 +5,9 @@
       :type="inputType" 
       :placeholder="inputPlaceholder"
       v-on:input="updateValue($event.target.value)" 
-      class="customInput peer " autocomplete="off">
+      class="customInput peer " 
+      autocomplete="off"
+      readonly onfocus="this.removeAttribute('readonly');">
     <label :for="inputId" class="customLabel">{{inputLabel}}</label>
   </div>
 </template>
