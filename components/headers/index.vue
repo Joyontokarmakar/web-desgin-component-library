@@ -32,7 +32,7 @@
       </div>
     </div>
     
-    <sidemenus :open="sidebar" @close="close" />
+    <sideMenuForMobileDevice :open="sidebar" @close="close" />
   </div>
 </template>
 
