@@ -8,25 +8,25 @@
     </div>
     <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-185px)] py-2">
       <div class="pr-3 flex flex-col justify-start gap-2">
-        <sidebarMainMenuButton :pathName ="'/'" :name="'Get Started'" :subMenu="false">
+        <sidebarMainmenuButton :pathName="'/'" :name="'Get Started'" :subMenu="false">
           <svgHomeIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
-        </sidebarMainMenuButton>
-        <sidebarMainMenuButton :pathName ="'#'" :name="'Components'" :subMenu="false">
+        </sidebarMainmenuButton>
+        <sidebarMainmenuButton :pathName="'#'" :name="'Components'" :subMenu="false">
           <svgComponentIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
-        </sidebarMainMenuButton>
-        <sidebarSubmenuButton :pathName ="'/component/button-design'" :name="'Button'" :subMenu="true"/>
-        <sidebarSubmenuButton :pathName ="'/component/accordion'" :name="'Accordion'" :subMenu="true"/>
-        <sidebarSubmenuButton :pathName ="'/component/dropdown'" :name="'Dropdown'" :subMenu="true"/>
-        <sidebarSubmenuButton :pathName ="'/component/floatingInput'" :name="'Floating Input'" :subMenu="true"/>
-        <sidebarMainMenuButton :pathName ="'/services'" :name="'Services'" :subMenu="false">
+        </sidebarMainmenuButton>
+        <sidebarSubmenuButton :pathName="'/component/button-design'" :name="'Button'" :subMenu="true"/>
+        <sidebarSubmenuButton :pathName="'/component/accordion'" :name="'Accordion'" :subMenu="true"/>
+        <sidebarSubmenuButton :pathName="'/component/dropdown'" :name="'Dropdown'" :subMenu="true"/>
+        <sidebarSubmenuButton :pathName="'/component/floatingInput'" :name="'Floating Input'" :subMenu="true"/>
+        <sidebarMainmenuButton :pathName="'/services'" :name="'Services'" :subMenu="false">
           <svgServiceIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
-        </sidebarMainMenuButton>
-        <sidebarMainMenuButton :pathName ="'/about'" :name="'About'" :subMenu="false">
+        </sidebarMainmenuButton>
+        <sidebarMainmenuButton :pathName="'/about'" :name="'About'" :subMenu="false">
           <svgIdeaIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
-        </sidebarMainMenuButton>
-        <sidebarMainMenuButton :pathName ="'/contact'" :name="'Contact'" :subMenu="false">
+        </sidebarMainmenuButton>
+        <sidebarMainmenuButton :pathName="'/contact'" :name="'Contact'" :subMenu="false">
           <svgMobileIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
-        </sidebarMainMenuButton>
+        </sidebarMainmenuButton>
         <!-- <dropdowns
           :title="'Dropdown'"
           :description="'Card description will goes here'"
