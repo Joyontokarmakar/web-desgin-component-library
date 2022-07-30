@@ -24,25 +24,25 @@
         </div>
         <div class="mt-5 space-y-2 overflow-y-auto h-[calc(100vh-150px)] py-2">
           <div class="pr-3">
-            <sidebarMainMenuButton @click="close" :pathName ="'/'" :name="'Get Started'" :subMenu="false">
-              <svgHomeIcon fill="#8B8F9A" width="16" height="16" />
-            </sidebarMainMenuButton>
-            <sidebarMainMenuButton @click="close" :pathName ="'#'" :name="'Components'" :subMenu="false">
-              <svgComponentIcon fill="#8B8F9A" width="16" height="16" />
-            </sidebarMainMenuButton>
+            <sidebarMainmenuButton @click="close" :pathName ="'/'" :name="'Get Started'" :subMenu="false">
+              <svgHomeIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
+            </sidebarMainmenuButton>
+            <sidebarMainmenuButton @click="close" :pathName ="'#'" :name="'Components'" :subMenu="false">
+              <svgComponentIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
+            </sidebarMainmenuButton>
             <sidebarSubmenuButton @click="close" :pathName ="'/component/button-design'" :name="'Button'" :subMenu="true"/>
             <sidebarSubmenuButton @click="close" :pathName ="'/component/accordion'" :name="'Accordion'" :subMenu="true"/>
             <sidebarSubmenuButton @click="close" :pathName ="'/component/dropdown'" :name="'Dropdown'" :subMenu="true"/>
             <sidebarSubmenuButton @click="close" :pathName ="'/component/floatingInput'" :name="'Floating Input'" :subMenu="true"/>
-            <sidebarMainMenuButton @click="close" :pathName ="'/services'" :name="'Services'" :subMenu="false">
-              <svgServiceIcon fill="#8B8F9A" width="16" height="16" />
-            </sidebarMainMenuButton>
-            <sidebarMainMenuButton @click="close" :pathName ="'/about'" :name="'About'" :subMenu="false">
-              <svgIdeaIcon fill="#8B8F9A" width="16" height="16" />
-            </sidebarMainMenuButton>
-            <sidebarMainMenuButton @click="close" :pathName ="'/contact'" :name="'Contact'" :subMenu="false">
-              <svgMobileIcon fill="#8B8F9A" width="16" height="16" />
-            </sidebarMainMenuButton>
+            <sidebarMainmenuButton @click="close" :pathName ="'/services'" :name="'Services'" :subMenu="false">
+              <svgServiceIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
+            </sidebarMainmenuButton>
+            <sidebarMainmenuButton @click="close" :pathName ="'/about'" :name="'About'" :subMenu="false">
+              <svgIdeaIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
+            </sidebarMainmenuButton>
+            <sidebarMainmenuButton @click="close" :pathName ="'/contact'" :name="'Contact'" :subMenu="false">
+              <svgMobileIcon :fill="'#8B8F9A'" :width="'16'" :height="'16'" />
+            </sidebarMainmenuButton>
             
             <!-- <dropdowns
               :title="'Dropdown'"
