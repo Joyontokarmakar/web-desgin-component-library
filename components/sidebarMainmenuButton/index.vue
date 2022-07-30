@@ -4,7 +4,7 @@
           class="mainMenuClass flex justify-start items-center gap-x-2 ml-4"
           :class="$route.path === props.pathName ? 'mainMenuActiveClass' : 
                props.subMenu ? '' : ''">
-          <slot/>
+          <slot></slot>
           <h5 class="mainMenuClass mb-0" :class="$route.path === props.pathName ? 'mainMenuActiveClass' : ''">
                {{props.name}}
           </h5>

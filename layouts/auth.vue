@@ -17,7 +17,7 @@
         </tr>
      </table>
       <div class="glossyEffect w-full sm:w-2/4 lg:w-[27%] 2xl:w-3/12 px-10 pt-10 pb-8">
-        <slot />
+        <slot></slot>
       </div>
     </div>
   </div>
