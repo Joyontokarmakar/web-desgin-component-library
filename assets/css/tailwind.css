@@ -49,7 +49,6 @@ summary::-webkit-details-marker {
 .linkHoverClass{
   @apply border-l-2 hover:border-corporateGray;
 }
-
 .mainMenuClass{
   @apply text-corporateGray font-bold text-lg;
 }
