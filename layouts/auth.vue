@@ -24,7 +24,49 @@
 </template>
 
 <script setup>
-    const { data: loginData } = await useFetch('https://joyontojsondata.netlify.app/loginData.json');
+    // const { data: loginData } = await useFetch('https://joyontojsondata.netlify.app/loginData.json');
+  const loginData = ref([
+    {
+      "firstName": "User",
+      "lastName": "1",
+      "phone": "01521000001",
+      "email": "user1@gmail.com",
+      "password": "User1234",
+      "userType": "Guest"
+    },
+    {
+      "firstName": "User",
+      "lastName": "2",
+      "phone": "01521000002",
+      "email": "user2@gmail.com",
+      "password": "User2345",
+      "userType": "Guest"
+    },
+    {
+      "firstName": "User",
+      "lastName": "3",
+      "phone": "01521000003",
+      "email": "user3@gmail.com",
+      "password": "User3456",
+      "userType": "Guest"
+    },
+    {
+      "firstName": "User",
+      "lastName": "4",
+      "phone": "01521000004",
+      "email": "user4@gmail.com",
+      "password": "User4567",
+      "userType": "Guest"
+    },
+    {
+      "firstName": "Joyonto",
+      "lastName": "Karmakar",
+      "phone": "01521000005",
+      "email": "joyonto@gmail.com",
+      "password": "Joyonto1234",
+      "userType": "Author"
+    }
+  ]);
 
   // const loginData = ref({});
   // const loadLoginInfo = async() => {
