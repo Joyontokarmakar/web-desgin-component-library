@@ -5,17 +5,4 @@
 </template>
 
 <script setup>
-  // const userInfo = reactive({
-  //   fName: "Default",
-  //   lName: "User",
-  //   email: "defaultuser@gmail.com",
-  //   isLogin: false
-  // });
-  // onMounted(()=> {
-  //   setDefaultUser();
-  // })
-
-  // const setDefaultUser = () => {
-  //   localStorage.setItem('userData', JSON.stringify(userInfo));
-  // }
 </script>

@@ -19,7 +19,6 @@
 
 <script setup>
      // const { data: loginData } = await useFetch('https://joyontojsondata.netlify.app/loginData.json');
-     // const { data: loginData } = await useFetch('https://joyontojsondata.netlify.app/loginData.json');
      const loginData = ref([
           {
                "firstName": "User",
